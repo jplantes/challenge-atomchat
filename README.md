@@ -19,4 +19,4 @@ La plicación usa para fines didacticos el localStorage del navegador
 
 ## ¿Donde lo podes probar on-line?
 
-[Netifli](https://6480ae6c1ebe540e6d53a63b--glittery-nougat-100210.netlify.app)
+[Netifli](glittery-nougat-100210.netlify.app)

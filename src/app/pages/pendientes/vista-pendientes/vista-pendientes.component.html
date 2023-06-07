@@ -2,7 +2,7 @@
 
   <h1 class="text-center text-3xl py-6">Listado de pendientes</h1>
   <div class="flex justify-center">
-    <form [formGroup]="inputPen" (ngSubmit)="onSubmit()" class="w-4/6 flex flex-col">
+    <form [formGroup]="inputPen" (ngSubmit)="onSubmit()"  autocomplete="off" class="w-4/6 flex flex-col">
       <input formControlName="pendiente" type="text" class="bg-white rounded-xl shadow-xl text-xl p-3 mb-4">
       <span *ngIf="isValidField('pendiente')" class="text-red-600 font-bold mb-2">
           {{ getFieldError('pendiente') }}

@@ -47,7 +47,7 @@ export class VistaPendientesComponent implements OnInit{
 
     this._pendiente.addPendiente(newPen);
     this.cargarPendientes();
-    this.inputPen.reset();
+    this.inputPen.reset({pendiente: ''});
   }
 
   getFieldError(field: string): string | null {
