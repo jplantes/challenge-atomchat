@@ -1,0 +1,10 @@
+<div class="bg-slate-200  min-h-[30rem] p-4 rounded-xl shadow-2xl w-11/12 md:5/6 lg:w-4/6 mx-auto">
+
+  <div class="flex justify-center items-center min-h-[30rem]">
+    <form [formGroup]="inputEditar" (ngSubmit)="editarPendiente()" class="w-4/6 flex flex-col">
+      <input formControlName="pendiente"  type="text" class="bg-white rounded-xl shadow-xl text-xl p-3 mb-4">
+      <button type="submit" class="p-3 bg-green-700 text-white font-bold rounded-lg shadow-xl focus:border-none">Actualizar pendiente</button>
+    </form>
+  </div>
+  
+</div>

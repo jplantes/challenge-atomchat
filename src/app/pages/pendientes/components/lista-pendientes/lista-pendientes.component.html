@@ -1,0 +1,34 @@
+<ng-container *ngIf="listado.length > 0; else mensajeVacio">
+  <ng-container *ngFor="let tarea of listado; let i = index">
+    <div class="flex flex-row rounded-xl shadow-lg mb-6 py-3">
+      <div class="w-1/12 flex justify-center items-center">
+        <input type="checkbox" (change)="cambiarEstado(tarea.id)" [checked]="tarea.estado">
+      </div>
+      <div class="w-9/12 flex items-center">
+        {{ tarea.pendiente }}
+      </div>
+      <div class="w-2/12 flex justify-around">
+        <i  [swal]="{ title: 'Mira que si lo borrar no vuelve!!',  showCancelButton: true, icon: 'warning' }"
+            (confirm)="eliminarPendiente(tarea.id)"
+            class="iconoir-trash text-xl text-red-700 cursor"
+        ></i>
+
+        <i  *ngIf="!tarea.estado" 
+            [routerLink]="['/lista', tarea.id]"
+            class="iconoir-edit-pencil text-xl text-green-800 cursor"
+        ></i>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+<ng-template #mensajeVacio>
+  <div class="p-10 bg-yellow-500 text-center text-2xl w-full rounded-2xl shadow-2xl">
+    <ng-container *ngIf="!estado; else sinTareas">
+      No hay tareas pendientes cargadas
+    </ng-container>
+    <ng-template #sinTareas>
+      No hay tareas finalizadas
+    </ng-template>
+    
+  </div>
+</ng-template>

@@ -1,0 +1,20 @@
+# TodoList
+
+Proyecto generado con  [Angular CLI](https://github.com/angular/angular-cli) versión 15.2.5.
+
+## Para correrlo en local
+
+```
+ng serve
+```
+
+La plicación usa para fines didacticos el localStorage del navegador
+
+## ¿Que use?
+
+ * [Angular](https://angular.io/)
+ * [Tailwindcss](https://tailwindcss.com/)
+ * [SweetAlert2](https://github.com/sweetalert2/ngx-sweetalert2)
+ * [angular2-uuid](https://www.npmjs.com/package/angular2-uuid)
+
+## ¿Donde lo podes probar on-line?
